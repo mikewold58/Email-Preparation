@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Preparation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .email-preview {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .email-preview h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .email-preview p {
+      white-space: pre-wrap;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Email Preparation</h2>
+    <label for="client-name">Client Name:</label>
+    <input type="text" id="client-name">
+    <br>
+    <label for="vendor-name">Vendor Name (if applicable):</label>
+    <input type="text" id="vendor-name">
+    <br>
+      <label for="Date">Date (if applicable):</label>
+    <input type="text" id="Date">
+    <br>
+    <label for="email-type">Email Type:</label>
+    <select id="email-type">
+      <option value="W-9 Request">W-9 Request</option>
+      <option value="W-9 Request and Bill.com Connection inquiry">W-9 Request and Bill.com 
+      <option value="AP Aging Report">AP Aging Report</option>
+    </select>
+    <br>
+    <button onclick="prepareEmail()">Prepare Email</button>
+
+    <div class="email-preview">
+      <h3>Email Preview</h3>
+      <p id="email-content"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
